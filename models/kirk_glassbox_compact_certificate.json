@@ -1,0 +1,129 @@
+{
+ "artifact": "kirk_glassbox_compact.json",
+ "mode": "compact",
+ "model": {
+  "terms": 5,
+  "max_order": 3,
+  "bias": -0.9796442100954099,
+  "features": [
+   "EMcrossnear",
+   "EMfracstdnear",
+   "EPstdnear",
+   "MMRstrengthnear",
+   "EMcrossfar",
+   "EMfracstdfar",
+   "EPstdfar",
+   "MMRstrengthfar",
+   "MEGNO",
+   "MEGNOstd",
+   "Tsec"
+  ],
+  "blocks": [
+   [
+    "EMcrossnear",
+    "MMRstrengthnear",
+    "EMfracstdnear"
+   ],
+   [
+    "EMcrossfar",
+    "Tsec"
+   ],
+   [
+    "MEGNO",
+    "MEGNOstd"
+   ],
+   [
+    "EPstdnear",
+    "EMfracstdfar"
+   ],
+   [
+    "EPstdfar",
+    "MMRstrengthfar"
+   ]
+  ]
+ },
+ "metrics_truth": {
+  "compiled_table": {
+   "auc": 0.9296184586011841,
+   "logloss": 0.32002953413793217,
+   "acc": 0.8615279672578445
+  },
+  "booster": {
+   "auc": 0.9296174430531436,
+   "logloss": 0.32002952694892883,
+   "acc": 0.8615279672578445
+  }
+ },
+ "compile_fidelity": {
+  "table_vs_booster_rmse": 8.351635345754303e-07,
+  "table_vs_booster_max_abs": 3.7755736617128832e-06,
+  "term_diagnostics": {
+   "EMcrossnear*MMRstrengthnear*EMfracstdnear": {
+    "rmse": 0.0,
+    "max_abs": 0.0,
+    "approximate": false,
+    "grid_cells": 211120,
+    "trees": 62
+   },
+   "EMcrossfar*Tsec": {
+    "rmse": 0.0,
+    "max_abs": 0.0,
+    "approximate": false,
+    "grid_cells": 2750,
+    "trees": 37
+   },
+   "MEGNO*MEGNOstd": {
+    "rmse": 0.0,
+    "max_abs": 0.0,
+    "approximate": false,
+    "grid_cells": 2915,
+    "trees": 42
+   },
+   "EPstdnear*EMfracstdfar": {
+    "rmse": 0.0,
+    "max_abs": 0.0,
+    "approximate": false,
+    "grid_cells": 3000,
+    "trees": 33
+   },
+   "EPstdfar*MMRstrengthfar": {
+    "rmse": 0.0,
+    "max_abs": 0.0,
+    "approximate": false,
+    "grid_cells": 240,
+    "trees": 6
+   },
+   "total_rmse": 0.008762229205952262,
+   "total_max_abs": 0.23787976200824568
+  }
+ },
+ "additivity_error": 0.0,
+ "n_terms": 5,
+ "term_counts": {
+  "main": 0,
+  "pair": 4,
+  "threeway": 1
+ },
+ "term_ids": [
+  "EMcrossnear*MMRstrengthnear*EMfracstdnear",
+  "EMcrossfar*Tsec",
+  "MEGNO*MEGNOstd",
+  "EPstdnear*EMfracstdfar",
+  "EPstdfar*MMRstrengthfar"
+ ],
+ "expected_auc": 0.9296184586011841,
+ "glassbox_contract": {
+  "admissible": true,
+  "checks": {
+   "n_terms": 5,
+   "max_order": 3,
+   "all_tables": true,
+   "unique_ids": true,
+   "bins_ok": true,
+   "has_certificate": true,
+   "finite_tables": true,
+   "additivity_error": 0.0
+  },
+  "violations": []
+ }
+}

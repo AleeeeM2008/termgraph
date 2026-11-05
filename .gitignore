@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+env/
+.DS_Store
+
+# LaTeX intermediates; the compiled paper is kept
+paper/*.aux
+paper/*.log
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+
+# local data / caches
+data/
+tmp/
+*.joblib
+
+# config-driven retraining outputs
+models/*_retrained*

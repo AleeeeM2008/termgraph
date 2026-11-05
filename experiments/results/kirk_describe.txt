@@ -1,0 +1,24 @@
+TermGraph: 22 terms, max_order=3, bias=-2.0019
+id                                     inputs                                         bins         range                  backend
+EMcrossnear                            EMcrossnear                                    (1022,)      [-3.747,+1.347]  ebm
+EMfracstdnear                          EMfracstdnear                                  (1022,)      [-1.596,+2.061]  ebm
+EPstdnear                              EPstdnear                                      (1022,)      [-1.596,+1.506]  ebm
+MMRstrengthnear                        MMRstrengthnear                                (1022,)      [-0.557,+1.062]  ebm
+EMcrossfar                             EMcrossfar                                     (1022,)      [-0.765,+0.391]  ebm
+EMfracstdfar                           EMfracstdfar                                   (1022,)      [-2.619,+0.395]  ebm
+EPstdfar                               EPstdfar                                       (1022,)      [-1.220,+0.277]  ebm
+MMRstrengthfar                         MMRstrengthfar                                 (1022,)      [-0.332,+0.385]  ebm
+MEGNO                                  MEGNO                                          (1022,)      [-1.743,+0.564]  ebm
+MEGNOstd                               MEGNOstd                                       (1022,)      [-2.244,+2.274]  ebm
+Tsec                                   Tsec                                           (1022,)      [-3.822,+1.747]  ebm
+EMcrossnear*EMfracstdnear              EMcrossnear,EMfracstdnear                      (62, 62)     [-1.187,+3.045]  ebm
+EMcrossnear*MMRstrengthnear            EMcrossnear,MMRstrengthnear                    (62, 62)     [-1.588,+0.738]  ebm
+EMcrossnear*EPstdfar                   EMcrossnear,EPstdfar                           (62, 62)     [-1.259,+2.078]  ebm
+EMfracstdnear*EPstdnear                EMfracstdnear,EPstdnear                        (62, 62)     [-1.602,+0.702]  ebm
+EPstdnear*MMRstrengthnear              EPstdnear,MMRstrengthnear                      (62, 62)     [-0.747,+1.572]  ebm
+EPstdnear*MEGNO                        EPstdnear,MEGNO                                (62, 62)     [-0.383,+1.086]  ebm
+EPstdnear*MEGNOstd                     EPstdnear,MEGNOstd                             (62, 62)     [-1.023,+1.324]  ebm
+MMRstrengthnear*Tsec                   MMRstrengthnear,Tsec                           (62, 62)     [-1.163,+0.453]  ebm
+EMcrossfar*Tsec                        EMcrossfar,Tsec                                (62, 62)     [-3.291,+2.172]  ebm
+EMfracstdfar*Tsec                      EMfracstdfar,Tsec                              (62, 62)     [-0.724,+0.928]  ebm
+EMcrossnear*MMRstrengthnear*EMfracstdnear EMcrossnear,MMRstrengthnear,EMfracstdnear      (72, 54, 41) [-0.559,+0.438]  xgboost

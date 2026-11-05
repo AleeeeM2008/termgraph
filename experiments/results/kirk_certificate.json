@@ -1,0 +1,58 @@
+{
+ "teacher": "SPOCK 2.0 XGBoost (models/featureclassifier.json)",
+ "data": "KIRK 12k cache, stable subset, 5 seeds, paper protocol",
+ "compiled": {
+  "flat": {
+   "order": 1,
+   "terms": 11,
+   "r2_teacher": 0.9141611299125737,
+   "agreement_teacher": 0.9249658935879946,
+   "auc_teacher": 0.9805705008633696,
+   "auc_truth": 0.9315136360135716,
+   "rmse_teacher": 0.8941074414434939,
+   "acc_truth": 0.8619372442019099
+  },
+  "pairs": {
+   "order": 2,
+   "terms": 6,
+   "r2_teacher": 0.9321604582745507,
+   "agreement_teacher": 0.9323328785811732,
+   "auc_teacher": 0.9848417825134318,
+   "auc_truth": 0.9348307359960148,
+   "rmse_teacher": 0.7950063078902716,
+   "acc_truth": 0.8611186903137791
+  },
+  "triple": {
+   "order": 3,
+   "terms": 5,
+   "r2_teacher": 0.9354223075594625,
+   "agreement_teacher": 0.9392905866302865,
+   "auc_teacher": 0.986552240241908,
+   "auc_truth": 0.9363785556081764,
+   "rmse_teacher": 0.7756969085607652,
+   "acc_truth": 0.8656207366984994
+  }
+ },
+ "effective_order": {
+  "definition": "smallest order whose in-distribution R2 is within delta of order 3",
+  "delta_0.005": 2,
+  "delta_0.003": 3,
+  "note": "order 2 is within 0.0032 R2; order 3 has fewer terms (5 vs 6) and +0.0015 AUC truth"
+ },
+ "residual_after_order3": 0.06457769244053746,
+ "marginal_anova": {
+  "cumulative_share": {
+   "1": 0.3517358311573367,
+   "2": 0.4018272033912383,
+   "3": 0.4334751785029929
+  },
+  "residual_share": 0.5665248214970071,
+  "note": "marginal/product baseline; overstates high-order energy under correlated features"
+ },
+ "shap": {
+  "ledger_additivity_error": 1.4e-05,
+  "tree_shap_block_corr_min": 0.9999,
+  "baseline": "interventional/marginal, declared"
+ },
+ "caveat": "in-distribution R2 is the primary compiler metric; marginal ANOVA is an OOD robustness diagnostic"
+}

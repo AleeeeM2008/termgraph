@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If this work is useful, please cite the paper and repository."
+title: "TermGraph: A Certified Glassbox Exchange Architecture for GBM-Class Models"
+version: 0.1.4
+date-released: "2026-11-05"
+license: MIT
+repository-code: "https://github.com/AleeeeM2008/termgraph"
+authors:
+  - family-names: Mery Caro
+    given-names: Patricio Alejandro
+    email: pmery641@gmail.com
+    affiliation: Independent Researcher, La Serena, Chile
+keywords:
+  - glassbox models
+  - explainable artificial intelligence
+  - explainable boosting machines
+  - SHAP
+  - gradient boosting
+  - tabular data
+abstract: >-
+  TermGraph compiles gradient-boosted and explainable-boosting models into a
+  certified sum of low-order table terms. It provides exact term-level
+  attribution, declared feature sharing, editable terms, compact and
+  max-accuracy deployment modes, and a budget controller.

@@ -1,0 +1,84 @@
+{
+ "artifact": "kirk_glassbox.json",
+ "model": {
+  "terms": 22,
+  "max_order": 3,
+  "bias": -2.001874723202453,
+  "features": [
+   "EMcrossnear",
+   "EMfracstdnear",
+   "EPstdnear",
+   "MMRstrengthnear",
+   "EMcrossfar",
+   "EMfracstdfar",
+   "EPstdfar",
+   "MMRstrengthfar",
+   "MEGNO",
+   "MEGNOstd",
+   "Tsec"
+  ]
+ },
+ "metrics_truth": {
+  "ebm_ga2m": {
+   "auc": 0.9339812529831724,
+   "logloss": 0.3121488584226827,
+   "acc": 0.8656207366984994
+  },
+  "ebm_plus_3way": {
+   "auc": 0.9350252363688064,
+   "logloss": 0.32304897931025656,
+   "acc": 0.8567530695770805
+  },
+  "compiled_table": {
+   "auc": 0.9350252363688064,
+   "logloss": 0.32304897931025656,
+   "acc": 0.8567530695770805
+  }
+ },
+ "compile_fidelity": {
+  "table_vs_hybrid_rmse": 9.583963415768243e-16,
+  "table_vs_hybrid_max_abs": 5.329070518200751e-15,
+  "table_vs_hybrid_p99_9_abs": 4.027889133340141e-15,
+  "table_vs_ebm_rmse": 9.461051697956168e-16,
+  "table_vs_ebm_max_abs": 5.329070518200751e-15,
+  "xgb_term_rmse": 6.740835903281751e-10,
+  "xgb_term_max_abs": 1.4901161193847656e-08
+ },
+ "additivity_error": 0.0,
+ "n_terms": 22,
+ "term_ids": [
+  "EMcrossnear",
+  "EMfracstdnear",
+  "EPstdnear",
+  "MMRstrengthnear",
+  "EMcrossfar",
+  "EMfracstdfar",
+  "EPstdfar",
+  "MMRstrengthfar",
+  "MEGNO",
+  "MEGNOstd",
+  "Tsec",
+  "EMcrossnear*EMfracstdnear",
+  "EMcrossnear*MMRstrengthnear",
+  "EMcrossnear*EPstdfar",
+  "EMfracstdnear*EPstdnear",
+  "EPstdnear*MMRstrengthnear",
+  "EPstdnear*MEGNO",
+  "EPstdnear*MEGNOstd",
+  "MMRstrengthnear*Tsec",
+  "EMcrossfar*Tsec",
+  "EMfracstdfar*Tsec",
+  "EMcrossnear*MMRstrengthnear*EMfracstdnear"
+ ],
+ "term_counts": {
+  "main": 11,
+  "pair": 10,
+  "threeway": 1
+ },
+ "grid_bins": {
+  "ebm_main": 48,
+  "ebm_pair": 24,
+  "xgb_term": 24
+ },
+ "note": "fidelity recomputed from saved EBM/residual and the deployed artifact"
+}

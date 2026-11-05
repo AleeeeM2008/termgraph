@@ -1,0 +1,244 @@
+{
+ "pairs": [
+  {
+   "strength": 0.09895694255828857,
+   "a": "EMfracstdnear",
+   "b": "MEGNO"
+  },
+  {
+   "strength": 0.07828956097364426,
+   "a": "EMcrossnear",
+   "b": "MMRstrengthnear"
+  },
+  {
+   "strength": 0.07746579498052597,
+   "a": "EMcrossfar",
+   "b": "Tsec"
+  },
+  {
+   "strength": 0.04226074740290642,
+   "a": "EPstdnear",
+   "b": "EMfracstdfar"
+  },
+  {
+   "strength": 0.019559739157557487,
+   "a": "MMRstrengthfar",
+   "b": "MEGNOstd"
+  }
+ ],
+ "terms": [
+  [
+   "EPstdfar"
+  ],
+  [
+   "EMcrossnear",
+   "MMRstrengthnear"
+  ],
+  [
+   "EMfracstdnear",
+   "MEGNO"
+  ],
+  [
+   "EPstdnear",
+   "EMfracstdfar"
+  ],
+  [
+   "EMcrossfar",
+   "Tsec"
+  ],
+  [
+   "MMRstrengthfar",
+   "MEGNOstd"
+  ]
+ ],
+ "base_metrics": {
+  "agree_teacher": 0.9297407912687585,
+  "rmse_teacher": 0.8096843540833178,
+  "r2_teacher": 0.9292454053466302,
+  "auc_teacher": 0.9824374050075994,
+  "auc_truth": 0.9242177741218048,
+  "acc_truth": 0.8567530695770805,
+  "ece_truth": 0.018708009867754345,
+  "calibration": [
+   {
+    "bin": [
+     0.0,
+     0.2
+    ],
+    "n": 750,
+    "pred": 0.04518099667004383,
+    "obs": 0.06266666666666666
+   },
+   {
+    "bin": [
+     0.2,
+     0.4
+    ],
+    "n": 151,
+    "pred": 0.29392437285164996,
+    "obs": 0.2847682119205298
+   },
+   {
+    "bin": [
+     0.4,
+     0.6000000000000001
+    ],
+    "n": 115,
+    "pred": 0.5047664464926033,
+    "obs": 0.4608695652173913
+   },
+   {
+    "bin": [
+     0.6000000000000001,
+     0.8
+    ],
+    "n": 125,
+    "pred": 0.7069327833195224,
+    "obs": 0.648
+   },
+   {
+    "bin": [
+     0.8,
+     1.0
+    ],
+    "n": 325,
+    "pred": 0.9154288320199137,
+    "obs": 0.9138461538461539
+   }
+  ]
+ },
+ "shap": {
+  "expected_value_shap": -1.1378187441713736,
+  "expected_value_ledger": -1.1399036633727613,
+  "additivity_error_shap": 0.096040652060009,
+  "additivity_error_ledger": 1.4276867940310467e-05,
+  "blocks": [
+   {
+    "term": [
+     "EPstdfar"
+    ],
+    "corr": 0.9992474600643843,
+    "rmse": 0.0053227778940468625,
+    "max_abs_diff": 0.02449116080609645,
+    "importance_std": 0.10721482254113585,
+    "importance_range": 0.7841207944499998
+   },
+   {
+    "term": [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    "corr": 0.9999670847866113,
+    "rmse": 0.009059714402061471,
+    "max_abs_diff": 0.03369585993400337,
+    "importance_std": 0.9387729643756301,
+    "importance_range": 4.796519565339003
+   },
+   {
+    "term": [
+     "EMfracstdnear",
+     "MEGNO"
+    ],
+    "corr": 0.9999579814571414,
+    "rmse": 0.011620074610357323,
+    "max_abs_diff": 0.0645590196193524,
+    "importance_std": 1.1546754779269572,
+    "importance_range": 4.345200926198103
+   },
+   {
+    "term": [
+     "EPstdnear",
+     "EMfracstdfar"
+    ],
+    "corr": 0.9999347257450377,
+    "rmse": 0.012512427296436432,
+    "max_abs_diff": 0.05823038400324698,
+    "importance_std": 0.7220167348948332,
+    "importance_range": 3.881592379505
+   },
+   {
+    "term": [
+     "EMcrossfar",
+     "Tsec"
+    ],
+    "corr": 0.9999597893166228,
+    "rmse": 0.008562061734576848,
+    "max_abs_diff": 0.04926155346846173,
+    "importance_std": 0.8864132575114179,
+    "importance_range": 4.6962346596454045
+   },
+   {
+    "term": [
+     "MMRstrengthfar",
+     "MEGNOstd"
+    ],
+    "corr": 0.999928091847552,
+    "rmse": 0.010684709847557648,
+    "max_abs_diff": 0.0749639682537171,
+    "importance_std": 0.8834327097720338,
+    "importance_range": 3.2316264364377005
+   }
+  ]
+ },
+ "term_ablation": [
+  {
+   "term": [
+    "EMcrossnear",
+    "MMRstrengthnear"
+   ],
+   "delta_auc_truth": -0.031266693070915674,
+   "delta_agree": -0.06139154160982263,
+   "delta_rmse": 0.4828712885847699,
+   "importance_std": 0.9387729643756301
+  },
+  {
+   "term": [
+    "EMcrossfar",
+    "Tsec"
+   ],
+   "delta_auc_truth": -0.023843036894860337,
+   "delta_agree": -0.0395634379263301,
+   "delta_rmse": 0.4183369757974811,
+   "importance_std": 0.8864132575114179
+  },
+  {
+   "term": [
+    "EPstdnear",
+    "EMfracstdfar"
+   ],
+   "delta_auc_truth": -0.008211721455483545,
+   "delta_agree": -0.01568894952251021,
+   "delta_rmse": 0.2474631610793503,
+   "importance_std": 0.7220167348948332
+  },
+  {
+   "term": [
+    "EMfracstdnear",
+    "MEGNO"
+   ],
+   "delta_auc_truth": -0.004586214950898282,
+   "delta_agree": -0.038199181446111896,
+   "delta_rmse": 0.5663554702942024,
+   "importance_std": 1.1546754779269572
+  },
+  {
+   "term": [
+    "MMRstrengthfar",
+    "MEGNOstd"
+   ],
+   "delta_auc_truth": -0.0031197635804162127,
+   "delta_agree": -0.02523874488403821,
+   "delta_rmse": 0.3836058933062749,
+   "importance_std": 0.8834327097720338
+  },
+  {
+   "term": [
+    "EPstdfar"
+   ],
+   "delta_auc_truth": -0.0006885415714590337,
+   "delta_agree": -0.0013642564802183177,
+   "delta_rmse": 0.006731637436325877,
+   "importance_std": 0.10721482254113585
+  }
+ ]
+}

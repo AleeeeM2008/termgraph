@@ -1,0 +1,68 @@
+{
+ "artifact": "kirk_glassbox_full.json",
+ "training": "all 9,767 short-stable systems",
+ "model": {
+  "terms": 22,
+  "max_order": 3,
+  "bias": -1.881845776816095,
+  "features": [
+   "EMcrossnear",
+   "EMfracstdnear",
+   "EPstdnear",
+   "MMRstrengthnear",
+   "EMcrossfar",
+   "EMfracstdfar",
+   "EPstdfar",
+   "MMRstrengthfar",
+   "MEGNO",
+   "MEGNOstd",
+   "Tsec"
+  ]
+ },
+ "expected_cv": {
+  "auc_mean": 0.9426889760550864,
+  "auc_std": 0.00482955904189913,
+  "logloss_mean": 0.30039723379989614,
+  "note": "five-seed sweep, kirk_compile_sweep.json"
+ },
+ "in_sample": {
+  "auc": 0.958219295298938,
+  "logloss": 0.2653739507022209,
+  "acc": 0.8770349134841814
+ },
+ "compile_fidelity": {
+  "table_vs_hybrid_rmse": 0.005119674850616544,
+  "table_vs_hybrid_max_abs": 0.27619504928588934
+ },
+ "additivity_error": 0.0,
+ "n_terms": 22,
+ "term_counts": {
+  "main": 11,
+  "pair": 10,
+  "threeway": 1
+ },
+ "term_ids": [
+  "EMcrossnear",
+  "EMfracstdnear",
+  "EPstdnear",
+  "MMRstrengthnear",
+  "EMcrossfar",
+  "EMfracstdfar",
+  "EPstdfar",
+  "MMRstrengthfar",
+  "MEGNO",
+  "MEGNOstd",
+  "Tsec",
+  "EMcrossnear*EMfracstdnear",
+  "EMcrossnear*MMRstrengthnear",
+  "EMcrossnear*EPstdfar",
+  "EMfracstdnear*EPstdnear",
+  "EMfracstdnear*EMfracstdfar",
+  "EPstdnear*MMRstrengthnear",
+  "EPstdnear*MEGNO",
+  "EPstdnear*MEGNOstd",
+  "EPstdnear*Tsec",
+  "EMfracstdfar*Tsec",
+  "EMcrossnear*MMRstrengthnear*EMfracstdnear"
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "base": {
+  "auc": 0.9350252363688064,
+  "logloss": 0.32304897931025656,
+  "acc": 0.8567530695770805
+ },
+ "weakest_term": "EPstdnear*MEGNO",
+ "strongest_term": "EMcrossnear",
+ "zero": {
+  "term": "EPstdnear*MEGNO",
+  "metrics": {
+   "auc": 0.9351674130944764,
+   "logloss": 0.3234478468606064,
+   "acc": 0.8560709413369714
+  },
+  "prediction_max_abs": 0.9909339346408421,
+  "remaining_term_max_abs": 0.0,
+  "term_delta": {
+   "max_abs": 0.9909339346408422,
+   "mean": 0.001217126922423109
+  }
+ },
+ "clamp": {
+  "term": "EMcrossnear",
+  "range": [
+   -1.0,
+   1.0
+  ],
+  "metrics": {
+   "auc": 0.9340726523068172,
+   "logloss": 0.32248128031121975,
+   "acc": 0.8581173260572987
+  },
+  "prediction_max_abs": 2.7471811381278037,
+  "remaining_term_max_abs": 0.0
+ },
+ "monotone": {
+  "term": "EMcrossfar*Tsec",
+  "axis": 1,
+  "direction": 1,
+  "violations_before": 1365,
+  "violations_after": 0,
+  "metrics": {
+   "auc": 0.9348444688175974,
+   "logloss": 0.31677586290740967,
+   "acc": 0.8608458390177354
+  },
+  "prediction_max_abs": 2.2341456340506856,
+  "remaining_term_max_abs": 0.0
+ }
+}

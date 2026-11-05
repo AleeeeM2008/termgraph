@@ -1,0 +1,703 @@
+{
+ "top_pairs": [
+  {
+   "strength": 0.09895694255828857,
+   "a": "EMfracstdnear",
+   "b": "MEGNO"
+  },
+  {
+   "strength": 0.08052835613489151,
+   "a": "MEGNO",
+   "b": "MEGNOstd"
+  },
+  {
+   "strength": 0.07828956097364426,
+   "a": "EMcrossnear",
+   "b": "MMRstrengthnear"
+  },
+  {
+   "strength": 0.07746579498052597,
+   "a": "EMcrossfar",
+   "b": "Tsec"
+  },
+  {
+   "strength": 0.0698261708021164,
+   "a": "EMfracstdnear",
+   "b": "MEGNOstd"
+  },
+  {
+   "strength": 0.061929576098918915,
+   "a": "MMRstrengthnear",
+   "b": "MEGNO"
+  },
+  {
+   "strength": 0.059372127056121826,
+   "a": "EMcrossnear",
+   "b": "EMfracstdfar"
+  },
+  {
+   "strength": 0.05893440917134285,
+   "a": "EPstdnear",
+   "b": "Tsec"
+  },
+  {
+   "strength": 0.05694746598601341,
+   "a": "MMRstrengthnear",
+   "b": "MEGNOstd"
+  },
+  {
+   "strength": 0.05682804435491562,
+   "a": "EMfracstdnear",
+   "b": "Tsec"
+  }
+ ],
+ "models": {
+  "backfit_m3_pairs_only": {
+   "agree_teacher": 0.927694406548431,
+   "rmse_teacher": 0.8681424149441186,
+   "r2_teacher": 0.9186598249020561,
+   "auc_teacher": 0.9806055515558756,
+   "auc_truth": 0.9207730351684287,
+   "acc_truth": 0.854706684856753,
+   "ece_truth": 0.022809417430573783,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 749,
+     "pred": 0.04597886349468012,
+     "obs": 0.06809078771695594
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 151,
+     "pred": 0.29499047834631786,
+     "obs": 0.271523178807947
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 119,
+     "pred": 0.5055083885867938,
+     "obs": 0.4789915966386555
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 132,
+     "pred": 0.7052893587230609,
+     "obs": 0.6742424242424242
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 315,
+     "pred": 0.9177127583719685,
+     "obs": 0.8984126984126984
+    }
+   ],
+   "n_terms": 9,
+   "n_pairs": 3,
+   "mode": "pairs_only",
+   "best_cycle": 5,
+   "val_mse": 0.7536712526250062,
+   "seconds": 5.9,
+   "terms": [
+    [
+     "EMfracstdnear",
+     "MEGNO"
+    ],
+    [
+     "MEGNO",
+     "MEGNOstd"
+    ],
+    [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    [
+     "EPstdnear"
+    ],
+    [
+     "EMcrossfar"
+    ],
+    [
+     "EMfracstdfar"
+    ],
+    [
+     "EPstdfar"
+    ],
+    [
+     "MMRstrengthfar"
+    ],
+    [
+     "Tsec"
+    ]
+   ]
+  },
+  "backfit_m3_full": {
+   "agree_teacher": 0.9263301500682128,
+   "rmse_teacher": 0.8660148800674657,
+   "r2_teacher": 0.9190580130490553,
+   "auc_teacher": 0.9805835533157348,
+   "auc_truth": 0.9217032771735267,
+   "acc_truth": 0.8519781718963165,
+   "ece_truth": 0.01863005070630866,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 753,
+     "pred": 0.04602170450851076,
+     "obs": 0.06374501992031872
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 147,
+     "pred": 0.29503098491565666,
+     "obs": 0.29931972789115646
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 121,
+     "pred": 0.5007057656492198,
+     "obs": 0.48760330578512395
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 128,
+     "pred": 0.7073954829323232,
+     "obs": 0.65625
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 317,
+     "pred": 0.9186231329781251,
+     "obs": 0.9022082018927445
+    }
+   ],
+   "n_terms": 14,
+   "n_pairs": 3,
+   "mode": "full",
+   "best_cycle": 5,
+   "val_mse": 0.7499817724982671,
+   "seconds": 3.5,
+   "terms": [
+    [
+     "EMfracstdnear",
+     "MEGNO"
+    ],
+    [
+     "MEGNO",
+     "MEGNOstd"
+    ],
+    [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    [
+     "EMcrossnear"
+    ],
+    [
+     "EMfracstdnear"
+    ],
+    [
+     "EPstdnear"
+    ],
+    [
+     "MMRstrengthnear"
+    ],
+    [
+     "EMcrossfar"
+    ],
+    [
+     "EMfracstdfar"
+    ],
+    [
+     "EPstdfar"
+    ],
+    [
+     "MMRstrengthfar"
+    ],
+    [
+     "MEGNO"
+    ],
+    [
+     "MEGNOstd"
+    ],
+    [
+     "Tsec"
+    ]
+   ]
+  },
+  "backfit_m5_pairs_only": {
+   "agree_teacher": 0.9256480218281037,
+   "rmse_teacher": 0.8562085432172462,
+   "r2_teacher": 0.9208807309198045,
+   "auc_teacher": 0.9796316294696424,
+   "auc_truth": 0.9207872528409956,
+   "acc_truth": 0.8512960436562074,
+   "ece_truth": 0.024736687123147832,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 750,
+     "pred": 0.04490238438452698,
+     "obs": 0.06933333333333333
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 151,
+     "pred": 0.29235554821417153,
+     "obs": 0.26490066225165565
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 113,
+     "pred": 0.4994280341025102,
+     "obs": 0.48672566371681414
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 134,
+     "pred": 0.7045220819099494,
+     "obs": 0.6268656716417911
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 318,
+     "pred": 0.918093575475073,
+     "obs": 0.9119496855345912
+    }
+   ],
+   "n_terms": 9,
+   "n_pairs": 5,
+   "mode": "pairs_only",
+   "best_cycle": 5,
+   "val_mse": 0.733093069478199,
+   "seconds": 1.9,
+   "terms": [
+    [
+     "EMfracstdnear",
+     "MEGNO"
+    ],
+    [
+     "MEGNO",
+     "MEGNOstd"
+    ],
+    [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    [
+     "EMcrossfar",
+     "Tsec"
+    ],
+    [
+     "EMfracstdnear",
+     "MEGNOstd"
+    ],
+    [
+     "EPstdnear"
+    ],
+    [
+     "EMfracstdfar"
+    ],
+    [
+     "EPstdfar"
+    ],
+    [
+     "MMRstrengthfar"
+    ]
+   ]
+  },
+  "backfit_m5_full": {
+   "agree_teacher": 0.9263301500682128,
+   "rmse_teacher": 0.848228203460014,
+   "r2_teacher": 0.9223487287815886,
+   "auc_teacher": 0.9805735541156707,
+   "auc_truth": 0.9222679218840446,
+   "acc_truth": 0.8519781718963165,
+   "ece_truth": 0.01985364790162468,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 751,
+     "pred": 0.0460752484495909,
+     "obs": 0.06524633821571238
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 151,
+     "pred": 0.29795305106811437,
+     "obs": 0.2781456953642384
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 112,
+     "pred": 0.4990722608540147,
+     "obs": 0.48214285714285715
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 130,
+     "pred": 0.6987373964276821,
+     "obs": 0.6538461538461539
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 322,
+     "pred": 0.9161027762325806,
+     "obs": 0.9037267080745341
+    }
+   ],
+   "n_terms": 16,
+   "n_pairs": 5,
+   "mode": "full",
+   "best_cycle": 5,
+   "val_mse": 0.7194910851450029,
+   "seconds": 8.8,
+   "terms": [
+    [
+     "EMfracstdnear",
+     "MEGNO"
+    ],
+    [
+     "MEGNO",
+     "MEGNOstd"
+    ],
+    [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    [
+     "EMcrossfar",
+     "Tsec"
+    ],
+    [
+     "EMfracstdnear",
+     "MEGNOstd"
+    ],
+    [
+     "EMcrossnear"
+    ],
+    [
+     "EMfracstdnear"
+    ],
+    [
+     "EPstdnear"
+    ],
+    [
+     "MMRstrengthnear"
+    ],
+    [
+     "EMcrossfar"
+    ],
+    [
+     "EMfracstdfar"
+    ],
+    [
+     "EPstdfar"
+    ],
+    [
+     "MMRstrengthfar"
+    ],
+    [
+     "MEGNO"
+    ],
+    [
+     "MEGNOstd"
+    ],
+    [
+     "Tsec"
+    ]
+   ]
+  },
+  "backfit_m8_pairs_only": {
+   "agree_teacher": 0.9263301500682128,
+   "rmse_teacher": 0.8359906214239857,
+   "r2_teacher": 0.9245731513165378,
+   "auc_teacher": 0.9802115830733542,
+   "auc_truth": 0.9209984868334196,
+   "acc_truth": 0.8506139154160982,
+   "ece_truth": 0.02411917596966576,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 753,
+     "pred": 0.045683831441990515,
+     "obs": 0.06640106241699867
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 155,
+     "pred": 0.29942844805625296,
+     "obs": 0.3161290322580645
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 110,
+     "pred": 0.5066712759850976,
+     "obs": 0.41818181818181815
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 132,
+     "pred": 0.705303635802758,
+     "obs": 0.6742424242424242
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 316,
+     "pred": 0.9187852095308331,
+     "obs": 0.9082278481012658
+    }
+   ],
+   "n_terms": 10,
+   "n_pairs": 8,
+   "mode": "pairs_only",
+   "best_cycle": 5,
+   "val_mse": 0.6988803191088618,
+   "seconds": 6.3,
+   "terms": [
+    [
+     "EMfracstdnear",
+     "MEGNO"
+    ],
+    [
+     "MEGNO",
+     "MEGNOstd"
+    ],
+    [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    [
+     "EMcrossfar",
+     "Tsec"
+    ],
+    [
+     "EMfracstdnear",
+     "MEGNOstd"
+    ],
+    [
+     "MMRstrengthnear",
+     "MEGNO"
+    ],
+    [
+     "EMcrossnear",
+     "EMfracstdfar"
+    ],
+    [
+     "EPstdnear",
+     "Tsec"
+    ],
+    [
+     "EPstdfar"
+    ],
+    [
+     "MMRstrengthfar"
+    ]
+   ]
+  },
+  "backfit_m8_full": {
+   "agree_teacher": 0.9256480218281037,
+   "rmse_teacher": 0.8261621430529302,
+   "r2_teacher": 0.9263362652405398,
+   "auc_teacher": 0.9810675145988321,
+   "auc_truth": 0.9226782032924067,
+   "acc_truth": 0.8512960436562074,
+   "ece_truth": 0.019836828816639722,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 746,
+     "pred": 0.04453752916212518,
+     "obs": 0.06166219839142091
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 152,
+     "pred": 0.28962942954389004,
+     "obs": 0.29605263157894735
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 116,
+     "pred": 0.4971715456212299,
+     "obs": 0.46551724137931033
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 132,
+     "pred": 0.7083550399888522,
+     "obs": 0.6590909090909091
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 320,
+     "pred": 0.9192334266256854,
+     "obs": 0.903125
+    }
+   ],
+   "n_terms": 19,
+   "n_pairs": 8,
+   "mode": "full",
+   "best_cycle": 5,
+   "val_mse": 0.6825438866138104,
+   "seconds": 6.1,
+   "terms": [
+    [
+     "EMfracstdnear",
+     "MEGNO"
+    ],
+    [
+     "MEGNO",
+     "MEGNOstd"
+    ],
+    [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    [
+     "EMcrossfar",
+     "Tsec"
+    ],
+    [
+     "EMfracstdnear",
+     "MEGNOstd"
+    ],
+    [
+     "MMRstrengthnear",
+     "MEGNO"
+    ],
+    [
+     "EMcrossnear",
+     "EMfracstdfar"
+    ],
+    [
+     "EPstdnear",
+     "Tsec"
+    ],
+    [
+     "EMcrossnear"
+    ],
+    [
+     "EMfracstdnear"
+    ],
+    [
+     "EPstdnear"
+    ],
+    [
+     "MMRstrengthnear"
+    ],
+    [
+     "EMcrossfar"
+    ],
+    [
+     "EMfracstdfar"
+    ],
+    [
+     "EPstdfar"
+    ],
+    [
+     "MMRstrengthfar"
+    ],
+    [
+     "MEGNO"
+    ],
+    [
+     "MEGNOstd"
+    ],
+    [
+     "Tsec"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,506 @@
+{
+ "baseline": {
+  "agree_teacher": 0.9297407912687585,
+  "rmse_teacher": 0.8096843540833178,
+  "r2_teacher": 0.9292454053466302,
+  "auc_teacher": 0.9824374050075994,
+  "auc_truth": 0.9242177741218048,
+  "acc_truth": 0.8567530695770805,
+  "ece_truth": 0.018708009867754345,
+  "calibration": [
+   {
+    "bin": [
+     0.0,
+     0.2
+    ],
+    "n": 750,
+    "pred": 0.04518099667004383,
+    "obs": 0.06266666666666666
+   },
+   {
+    "bin": [
+     0.2,
+     0.4
+    ],
+    "n": 151,
+    "pred": 0.29392437285164996,
+    "obs": 0.2847682119205298
+   },
+   {
+    "bin": [
+     0.4,
+     0.6000000000000001
+    ],
+    "n": 115,
+    "pred": 0.5047664464926033,
+    "obs": 0.4608695652173913
+   },
+   {
+    "bin": [
+     0.6000000000000001,
+     0.8
+    ],
+    "n": 125,
+    "pred": 0.7069327833195224,
+    "obs": 0.648
+   },
+   {
+    "bin": [
+     0.8,
+     1.0
+    ],
+    "n": 325,
+    "pred": 0.9154288320199137,
+    "obs": 0.9138461538461539
+   }
+  ],
+  "n_terms": 6,
+  "blocks": [
+   [
+    "EPstdfar"
+   ],
+   [
+    "EMcrossnear",
+    "MMRstrengthnear"
+   ],
+   [
+    "EMfracstdnear",
+    "MEGNO"
+   ],
+   [
+    "EPstdnear",
+    "EMfracstdfar"
+   ],
+   [
+    "EMcrossfar",
+    "Tsec"
+   ],
+   [
+    "MMRstrengthfar",
+    "MEGNOstd"
+   ]
+  ],
+  "reconstruction_error": 1.4276867940310467e-05,
+  "n_trees": 1218,
+  "seconds": 1.1
+ },
+ "triples": {
+  "EMfracstdnear + MEGNO + MEGNOstd": {
+   "agree_teacher": 0.927694406548431,
+   "rmse_teacher": 0.8023241791909532,
+   "r2_teacher": 0.9305259025176312,
+   "auc_teacher": 0.9821814254859611,
+   "auc_truth": 0.9246138378575999,
+   "acc_truth": 0.8560709413369714,
+   "ece_truth": 0.021969763793416905,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 759,
+     "pred": 0.0467193303081721,
+     "obs": 0.06719367588932806
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 143,
+     "pred": 0.2955075029751042,
+     "obs": 0.2727272727272727
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 105,
+     "pred": 0.5006171921938968,
+     "obs": 0.45714285714285713
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 127,
+     "pred": 0.6964176754972089,
+     "obs": 0.6456692913385826
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 332,
+     "pred": 0.9138560919611662,
+     "obs": 0.9066265060240963
+    }
+   ],
+   "n_terms": 5,
+   "blocks": [
+    [
+     "EMfracstdnear",
+     "MEGNO",
+     "MEGNOstd"
+    ],
+    [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    [
+     "EPstdnear",
+     "EMfracstdfar"
+    ],
+    [
+     "EMcrossfar",
+     "Tsec"
+    ],
+    [
+     "EPstdfar",
+     "MMRstrengthfar"
+    ]
+   ],
+   "reconstruction_error": 1.2272020128989425e-05,
+   "n_trees": 1218,
+   "seconds": 1.8
+  },
+  "EMfracstdnear + MEGNO + Tsec": {
+   "agree_teacher": 0.9338335607094134,
+   "rmse_teacher": 0.7628718530842516,
+   "r2_teacher": 0.9371903554529868,
+   "auc_teacher": 0.9833713302935766,
+   "auc_truth": 0.9262691811636149,
+   "acc_truth": 0.8581173260572987,
+   "ece_truth": 0.014989314296633256,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 742,
+     "pred": 0.04336745730286648,
+     "obs": 0.05390835579514825
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 146,
+     "pred": 0.29041655809084505,
+     "obs": 0.2876712328767123
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 125,
+     "pred": 0.5003486056835692,
+     "obs": 0.488
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 116,
+     "pred": 0.7022889197749824,
+     "obs": 0.646551724137931
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 337,
+     "pred": 0.9161515732699815,
+     "obs": 0.8991097922848664
+    }
+   ],
+   "n_terms": 5,
+   "blocks": [
+    [
+     "EMfracstdnear",
+     "MEGNO",
+     "Tsec"
+    ],
+    [
+     "EMcrossnear",
+     "MMRstrengthnear"
+    ],
+    [
+     "EPstdnear",
+     "EMfracstdfar"
+    ],
+    [
+     "EMcrossfar",
+     "MEGNOstd"
+    ],
+    [
+     "EPstdfar",
+     "MMRstrengthfar"
+    ]
+   ],
+   "reconstruction_error": 1.0906421067602423e-05,
+   "n_trees": 1469,
+   "seconds": 3.1
+  },
+  "EMcrossnear + MMRstrengthnear + MEGNO": {
+   "agree_teacher": 0.9304229195088677,
+   "rmse_teacher": 0.7742124693207538,
+   "r2_teacher": 0.9353090578594416,
+   "auc_teacher": 0.9828993680505559,
+   "auc_truth": 0.9261127867653779,
+   "acc_truth": 0.8587994542974079,
+   "ece_truth": 0.019271462517734903,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 750,
+     "pred": 0.043592657464123476,
+     "obs": 0.06
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 155,
+     "pred": 0.29217484213964245,
+     "obs": 0.2967741935483871
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 99,
+     "pred": 0.4989558378781017,
+     "obs": 0.48484848484848486
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 133,
+     "pred": 0.7044621440971075,
+     "obs": 0.6015037593984962
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 329,
+     "pred": 0.9174970681887866,
+     "obs": 0.9179331306990881
+    }
+   ],
+   "n_terms": 5,
+   "blocks": [
+    [
+     "EMcrossnear",
+     "MMRstrengthnear",
+     "MEGNO"
+    ],
+    [
+     "EMfracstdnear",
+     "MEGNOstd"
+    ],
+    [
+     "EPstdnear",
+     "EMfracstdfar"
+    ],
+    [
+     "EMcrossfar",
+     "Tsec"
+    ],
+    [
+     "EPstdfar",
+     "MMRstrengthfar"
+    ]
+   ],
+   "reconstruction_error": 1.3412289410652534e-05,
+   "n_trees": 1217,
+   "seconds": 2.2
+  },
+  "EMcrossnear + MMRstrengthnear + EMfracstdnear": {
+   "agree_teacher": 0.9351978171896317,
+   "rmse_teacher": 0.7937320463385388,
+   "r2_teacher": 0.9320059386660884,
+   "auc_teacher": 0.9839612830973522,
+   "auc_truth": 0.9265982187287368,
+   "acc_truth": 0.8581173260572987,
+   "ece_truth": 0.017583076206031376,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 741,
+     "pred": 0.044545845032946806,
+     "obs": 0.058029689608636977
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 152,
+     "pred": 0.28910139630597326,
+     "obs": 0.2894736842105263
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 115,
+     "pred": 0.49271694279137757,
+     "obs": 0.40869565217391307
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 124,
+     "pred": 0.7101874487568817,
+     "obs": 0.6854838709677419
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 334,
+     "pred": 0.9131825780212628,
+     "obs": 0.9041916167664671
+    }
+   ],
+   "n_terms": 5,
+   "blocks": [
+    [
+     "EMcrossnear",
+     "MMRstrengthnear",
+     "EMfracstdnear"
+    ],
+    [
+     "EPstdnear",
+     "EMfracstdfar"
+    ],
+    [
+     "EMcrossfar",
+     "Tsec"
+    ],
+    [
+     "EPstdfar",
+     "MMRstrengthfar"
+    ],
+    [
+     "MEGNO",
+     "MEGNOstd"
+    ]
+   ],
+   "reconstruction_error": 1.1723924458806323e-05,
+   "n_trees": 1289,
+   "seconds": 4.4
+  },
+  "EMcrossnear + MMRstrengthnear + Tsec": {
+   "agree_teacher": 0.9297407912687585,
+   "rmse_teacher": 0.7991648956427564,
+   "r2_teacher": 0.9310719567014152,
+   "auc_teacher": 0.9827473802095833,
+   "auc_truth": 0.9248474139069149,
+   "acc_truth": 0.8608458390177354,
+   "ece_truth": 0.01942521098571026,
+   "calibration": [
+    {
+     "bin": [
+      0.0,
+      0.2
+     ],
+     "n": 752,
+     "pred": 0.0447632261741866,
+     "obs": 0.0625
+    },
+    {
+     "bin": [
+      0.2,
+      0.4
+     ],
+     "n": 147,
+     "pred": 0.29583290336082496,
+     "obs": 0.2789115646258503
+    },
+    {
+     "bin": [
+      0.4,
+      0.6000000000000001
+     ],
+     "n": 116,
+     "pred": 0.5062216756591252,
+     "obs": 0.5
+    },
+    {
+     "bin": [
+      0.6000000000000001,
+      0.8
+     ],
+     "n": 124,
+     "pred": 0.7024715437391964,
+     "obs": 0.6290322580645161
+    },
+    {
+     "bin": [
+      0.8,
+      1.0
+     ],
+     "n": 327,
+     "pred": 0.9168919963115578,
+     "obs": 0.908256880733945
+    }
+   ],
+   "n_terms": 5,
+   "blocks": [
+    [
+     "EMcrossnear",
+     "MMRstrengthnear",
+     "Tsec"
+    ],
+    [
+     "EMfracstdnear",
+     "MEGNO"
+    ],
+    [
+     "EPstdnear",
+     "EMfracstdfar"
+    ],
+    [
+     "EMcrossfar",
+     "MEGNOstd"
+    ],
+    [
+     "EPstdfar",
+     "MMRstrengthfar"
+    ]
+   ],
+   "reconstruction_error": 1.223917396142582e-05,
+   "n_trees": 1139,
+   "seconds": 1.6
+  }
+ },
+ "best_triple": "EMcrossnear + MMRstrengthnear + EMfracstdnear",
+ "delta_auc_vs_baseline": 0.0023804446069319862
+}

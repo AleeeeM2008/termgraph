@@ -1,0 +1,180 @@
+{
+ "objective": "glassbox architecture and deployable model, best of each world",
+ "artifacts": {
+  "certified_fold": "models/kirk_glassbox.json",
+  "deployment_full": "models/kirk_glassbox_full.json",
+  "compact_5term": "models/kirk_glassbox_compact.json",
+  "certificate_fold": "models/kirk_glassbox_certificate.json",
+  "certificate_full": "models/kirk_glassbox_full_certificate.json",
+  "certificate_compact": "models/kirk_glassbox_compact_certificate.json"
+ },
+ "model": {
+  "terms": 22,
+  "max_order": 3,
+  "term_counts": {
+   "main": 11,
+   "pair": 10,
+   "threeway": 1
+  },
+  "backends": "EBM low-order terms + XGBoost order-3 term"
+ },
+ "backend_selection": {
+  "EBM": "selected for main effects and pairs; best low-order optimizer",
+  "XGBoost": "selected for the order-3 term; EBM cannot represent it",
+  "NAM": "not selected on KIRK (0.9206 vs 0.9427); retained as an admissible smooth renderer",
+  "SHAP": "exact term ledger; feature values use declared sharing W, not full-model Shapley",
+  "parallel": "table runtime, thread-parallel over row chunks"
+ },
+ "modes": {
+  "max_accuracy": {
+   "terms": 22,
+   "auc": 0.9426889760550864,
+   "artifact": "models/kirk_glassbox_full.json"
+  },
+  "compact_5term": {
+   "terms": 5,
+   "auc": 0.9296184586011841,
+   "artifact": "models/kirk_glassbox_compact.json",
+   "auc_note": "same 5-term budget as EBM 5-feature (0.9252)"
+  }
+ },
+ "controller": {
+  "selections": {
+   "4": null,
+   "5": "compact_5term",
+   "6": "compact_5term",
+   "22": "max_accuracy_22term"
+  },
+  "policy": "highest expected AUC among admissible artifacts within term/order budget"
+ },
+ "performance": {
+  "fold0_auc": 0.9350252363688064,
+  "fold0_logloss": 0.32304897931025656,
+  "five_seed_compiled_auc": 0.9426889760550864,
+  "five_seed_compiled_auc_std": 0.00482955904189913,
+  "five_seed_compiled_logloss": 0.30039723379989614,
+  "ebm_ga2m_auc": 0.9416932423508214,
+  "full_data_in_sample_auc": 0.958219295298938,
+  "full_data_expected_cv_auc": 0.9426889760550864,
+  "compact_5term_auc": 0.9296184586011841,
+  "compact_5term_terms": 5,
+  "compact_5term_bytes": 5682829,
+  "compact_5term_compile_rmse": 8.351635345754303e-07,
+  "compact_5term_additivity": 0.0
+ },
+ "exactness": {
+  "table_vs_hybrid_max_abs": 5.329070518200751e-15,
+  "table_vs_hybrid_rmse": 9.583963415768243e-16,
+  "xgb_term_max_abs": 1.4901161193847656e-08,
+  "additivity_error": 0.0
+ },
+ "parallel": {
+  "best_backend": "thread",
+  "n_jobs": 8,
+  "speedup": 6.339116355065096,
+  "rows_per_s": 3752638.1045932407,
+  "max_abs_diff": 0.0,
+  "n_rows": 200000
+ },
+ "hardware": {
+  "n_rows": 200000,
+  "fast_serial_speedup": 1.4322417531988016,
+  "fast_thread8_speedup": 8.717801466290327,
+  "fast_thread8_rows_per_s": 5661989.957338785,
+  "fast_max_abs_diff": 5.329070518200751e-15,
+  "json_bytes": 5997041,
+  "npz_bytes": 661162,
+  "json_load_s": 0.05869811400043545,
+  "npz_load_s": 0.007955328001116868,
+  "npz_predict_max_abs_diff": 0.0
+ },
+ "edit_isolation": {
+  "zero_remaining_term_max_abs": 0.0,
+  "clamp_remaining_term_max_abs": 0.0,
+  "monotone_remaining_term_max_abs": 0.0,
+  "monotone_violations_before": 1365,
+  "monotone_violations_after": 0
+ },
+ "readability": {
+  "main_terms": 11,
+  "pair_terms": 10,
+  "threeway_terms": 1,
+  "describe": "experiments/results/kirk_describe.txt",
+  "figures": [
+   "assets/kirk_glassbox_main.png",
+   "assets/kirk_glassbox_threeway.png"
+  ]
+ },
+ "five_wins": [
+  {
+   "win": "max-accuracy mode beats EBM (KIRK)",
+   "metric": "AUC truth",
+   "value": "0.9427 vs 0.9417",
+   "status": "five seeds, all positive; +0.0010"
+  },
+  {
+   "win": "compact 5-term mode beats EBM at the same term budget",
+   "metric": "AUC truth",
+   "value": "0.9252 (EBM 5 terms) vs 0.9296 (deployed TermGraph 5-term)",
+   "status": "structural; EBM needs one term per feature"
+  },
+  {
+   "win": "beats NAM (KIRK)",
+   "metric": "AUC truth",
+   "value": "0.9427 vs 0.9206 (paper protocol); 0.9348 vs 0.9206 clean",
+   "status": "five seeds / clean protocol"
+  },
+  {
+   "win": "order-3 capability vs pairwise EBM",
+   "metric": "AUC on 3-way truth",
+   "value": "0.8297 vs 0.6989",
+   "status": "controlled 3-way benchmark; +0.131"
+  },
+  {
+   "win": "exact compile + fused parallel + binary deployment",
+   "metric": "max logit error / speedup / artifact load",
+   "value": "5.3e-15 / 8.72x / 0.66 MB",
+   "status": "fused runtime, max diff 5.3e-15; binary load 7.4x faster"
+  }
+ ],
+ "glassbox_contract": {
+  "max_accuracy": {
+   "admissible": true,
+   "checks": {
+    "n_terms": 22,
+    "max_order": 3,
+    "all_tables": true,
+    "unique_ids": true,
+    "bins_ok": true,
+    "has_certificate": true,
+    "finite_tables": true,
+    "additivity_error": 0.0
+   },
+   "violations": []
+  },
+  "compact_5term": {
+   "admissible": true,
+   "checks": {
+    "n_terms": 5,
+    "max_order": 3,
+    "all_tables": true,
+    "unique_ids": true,
+    "bins_ok": true,
+    "has_certificate": true,
+    "finite_tables": true,
+    "additivity_error": 0.0
+   },
+   "violations": []
+  }
+ },
+ "tests": {
+  "command": "PYTHONPATH=src pytest tests -q",
+  "result": "14 passed, 1 warning in 1.22s",
+  "returncode": 0
+ },
+ "negative_results": {
+  "ebm_wins_low_order": "EBM GA2M 0.9417 > TermGraph 5-term 0.9364 on raw KIRK AUC",
+  "second_threeway_overfits": "seed-0 AUC drops 0.9350 -> 0.9342-0.9343",
+  "marginal_anova_misleading": "order<=3 marginal share 0.433 but in-distribution R2 0.935"
+ }
+}

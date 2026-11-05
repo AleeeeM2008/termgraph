@@ -1,0 +1,17 @@
+{
+ "auc_glass": 0.9342046735520824,
+ "auc_unconstrained": 0.9379743878784186,
+ "delta_unconstrained_minus_glass": 0.0037697143263362154,
+ "bootstrap_ci95": [
+  0.0001026543772440353,
+  0.007587316463175172
+ ],
+ "bootstrap_upper95": 0.006991199401637155,
+ "n_holdout": 1466,
+ "n_boot": 2000,
+ "interpretation": {
+  "statistically_tied": false,
+  "non_inferior_margin_0.005": false,
+  "non_inferior_margin_0.002": false
+ }
+}

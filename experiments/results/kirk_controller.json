@@ -1,0 +1,26 @@
+{
+ "candidates": [
+  {
+   "name": "compact_5term",
+   "terms": 5,
+   "max_order": 3,
+   "expected_auc": 0.9296,
+   "admissible": true,
+   "violations": []
+  },
+  {
+   "name": "max_accuracy_22term",
+   "terms": 22,
+   "max_order": 3,
+   "expected_auc": 0.9427,
+   "admissible": true,
+   "violations": []
+  }
+ ],
+ "selections": {
+  "4": null,
+  "5": "compact_5term",
+  "6": "compact_5term",
+  "22": "max_accuracy_22term"
+ }
+}

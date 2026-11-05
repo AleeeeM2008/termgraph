@@ -1,0 +1,86 @@
+{
+ "rows": [
+  {
+   "auc": 0.9350252363688064,
+   "logloss": 0.32304897931025656,
+   "acc": 0.8567530695770805,
+   "seed": 0,
+   "n_terms": 22,
+   "max_order": 3,
+   "table_vs_hybrid_rmse": 0.07364499536757615,
+   "table_vs_hybrid_max_abs": 2.8197475263547975,
+   "ebm_auc": 0.9339812529831724,
+   "hybrid_auc": 0.9350252363688064,
+   "xgb_term_rmse": 0.0032383006693605053,
+   "seconds": 15.0
+  },
+  {
+   "auc": 0.9409525968205562,
+   "logloss": 0.29703650358300876,
+   "acc": 0.8683492496589359,
+   "seed": 1,
+   "n_terms": 22,
+   "max_order": 3,
+   "table_vs_hybrid_rmse": 7.672811253581163e-15,
+   "table_vs_hybrid_max_abs": 1.7408297026122455e-13,
+   "ebm_auc": 0.9389476720825047,
+   "hybrid_auc": 0.9409525968205562,
+   "xgb_term_rmse": 0.004427010605792051,
+   "seconds": 7.5
+  },
+  {
+   "auc": 0.9450118520360433,
+   "logloss": 0.29429595224201904,
+   "acc": 0.8656207366984994,
+   "seed": 2,
+   "n_terms": 22,
+   "max_order": 3,
+   "table_vs_hybrid_rmse": 2.62732078472158e-14,
+   "table_vs_hybrid_max_abs": 8.046896482483135e-13,
+   "ebm_auc": 0.9449568210862296,
+   "hybrid_auc": 0.9450118520360433,
+   "xgb_term_rmse": 0.003056114136848069,
+   "seconds": 9.3
+  },
+  {
+   "auc": 0.9427321828691373,
+   "logloss": 0.3077018035015019,
+   "acc": 0.8465211459754434,
+   "seed": 3,
+   "n_terms": 22,
+   "max_order": 3,
+   "table_vs_hybrid_rmse": 6.768787186479842e-14,
+   "table_vs_hybrid_max_abs": 1.7710277688820497e-12,
+   "ebm_auc": 0.9422752694093446,
+   "hybrid_auc": 0.9427321828691373,
+   "xgb_term_rmse": 0.0074231146019024495,
+   "seconds": 7.9
+  },
+  {
+   "auc": 0.9497230121808886,
+   "logloss": 0.27990293036269437,
+   "acc": 0.8724420190995907,
+   "seed": 4,
+   "n_terms": 22,
+   "max_order": 3,
+   "table_vs_hybrid_rmse": 2.6028751785380427e-14,
+   "table_vs_hybrid_max_abs": 5.098144129078719e-13,
+   "ebm_auc": 0.9483051961928558,
+   "hybrid_auc": 0.9497230121808886,
+   "xgb_term_rmse": 0.00683705595807542,
+   "seconds": 12.9
+  }
+ ],
+ "summary": {
+  "auc_mean": 0.9426889760550864,
+  "auc_std": 0.00482955904189913,
+  "logloss_mean": 0.30039723379989614,
+  "logloss_std": 0.014387459336568367,
+  "acc_mean": 0.8619372442019099,
+  "acc_std": 0.009268915553322264,
+  "table_vs_hybrid_rmse_mean": 0.014728999073540763,
+  "table_vs_hybrid_rmse_std": 0.029457998147017696,
+  "table_vs_hybrid_max_abs_mean": 0.5639495052716115,
+  "table_vs_hybrid_max_abs_std": 1.1278990105415934
+ }
+}
